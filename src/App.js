@@ -60,9 +60,7 @@ setInterval(function() {
 function App() {
   return (
     <>
-    <heading>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"></link>
-    </heading>
         <h1 id="message"></h1>
         <p id="days"></p>
         <p id="hours"></p>
