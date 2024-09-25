@@ -14,7 +14,7 @@ console.log(targetDate);
 
 const countdownDate = new Date(targetDate).getTime();
 
-const myfunc = setInterval(function() {
+setInterval(function() {
     document.getElementById('message').innerHTML = targetMessage;
     const now = new Date().getTime();
     const timeLeft = countdownDate - now;
@@ -24,25 +24,25 @@ const myfunc = setInterval(function() {
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    if (days == 1) {
+    if (days === 1) {
     document.getElementById('days').innerHTML = days + " Day,";
     } else {        
     document.getElementById('days').innerHTML = days + " Days,";
     }
 
-    if (hours == 1) {
+    if (hours === 1) {
         document.getElementById('hours').innerHTML = hours + " Hour,";
     } else {
         document.getElementById('hours').innerHTML = hours + " Hours,";
     }
 
-    if (minutes == 1) {
+    if (minutes === 1) {
         document.getElementById('mins').innerHTML = minutes + " Minute,";
     } else {
         document.getElementById('mins').innerHTML = minutes + " Minutes,";
     }
 
-    if (seconds == 1) {
+    if (seconds === 1) {
         document.getElementById('secs').innerHTML = seconds + " Second";
     } else {
         document.getElementById('secs').innerHTML = seconds + " Seconds";
@@ -60,13 +60,21 @@ const myfunc = setInterval(function() {
 function App() {
   return (
     <>
+    <heading>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"></link>
+    </heading>
         <h1 id="message"></h1>
         <p id="days"></p>
         <p id="hours"></p>
         <p id="mins"></p>
         <p id="secs"></p>
         <p id="end"></p>
+        <select>
+            <option value="Easter">Easter</option>
+            <option value="Halloween">Halloween</option>
+            <option value="Thanksgiving">Thanksgiving</option>
+            <option value="Christmas">Christmas</option>
+        </select>
     </>
   );
 }
