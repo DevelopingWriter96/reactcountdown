@@ -91,6 +91,15 @@ function App() {
         <label>
             Day: <input name="countdowndate" defaultValue="" />
         </label>
+        <label>
+            Year: <input name="countdownyear" defaultValue="" /> 
+        </label>
+        <label>
+            Header Message: <input name="headermessage" defaultValue="" />
+        </label>
+        <label>
+            End Message: <input name="endmessage" defaultValue="" />
+        </label>
     </>
   );
 }
