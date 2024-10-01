@@ -67,7 +67,7 @@ function App() {
         <p id="mins"></p>
         <p id="secs"></p>
         <p id="end"></p>
-        <select>
+        <select id="presets">
             <option value="Easter">Easter</option>
             <option value="Halloween">Halloween</option>
             <option value="Thanksgiving">Thanksgiving</option>
