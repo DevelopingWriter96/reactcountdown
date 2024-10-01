@@ -1,6 +1,5 @@
 import './App.css';
 
-
 let targetMonth = "October";
 let targetDay = "31";
 let targetYear = "2024";
@@ -73,6 +72,25 @@ function App() {
             <option value="Thanksgiving">Thanksgiving</option>
             <option value="Christmas">Christmas</option>
         </select>
+        <label>
+            Month: <select id="countdownmonth">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        </label>
+        <label>
+            Day: <input name="countdowndate" defaultValue="" />
+        </label>
     </>
   );
 }
