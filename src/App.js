@@ -4,7 +4,7 @@ let targetMonth = "October";
 let targetDay = "31";
 let targetYear = "2024";
 let targetTime = "00:00:00";
-let targetMessage = "The Scary times are almost upon us";
+let targetMessage = "The Scary times are almost upon us: ";
 let endMessage = "Happy Halloween!";
 
 let targetDate = targetMonth + " " + targetDay + " " + targetYear + " " + targetTime;
@@ -60,7 +60,7 @@ function App() {
   return (
     <>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"></link>
-        <h1 id="message"></h1>
+        <p id="message"></p>
         <p id="days"></p>
         <p id="hours"></p>
         <p id="mins"></p>
