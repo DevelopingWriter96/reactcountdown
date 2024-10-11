@@ -100,7 +100,7 @@ function App() {
         <label>
             End Message: <input name="endmessage" defaultValue="" />
         </label>
-        <button>Start the countdown!</button>
+        <button type="submit">Start the countdown!</button>
     </>
   );
 }
