@@ -1,11 +1,11 @@
 import './App.css';
 
-let targetMonth = "October";
-let targetDay = "31";
+let targetMonth = "November";
+let targetDay = "16";
 let targetYear = "2024";
 let targetTime = "00:00:00";
-let targetMessage = "The Scary times are almost upon us: ";
-let endMessage = "Happy Halloween!";
+let targetMessage = "Countdown to 28: ";
+let endMessage = "Happy Birthday!";
 
 let targetDate = targetMonth + " " + targetDay + " " + targetYear + " " + targetTime;
 
@@ -57,6 +57,17 @@ setInterval(function() {
 }, 1000)
 
 function App() {
+    function handleSubmit(e) {
+        e.preventDefault();
+    
+        const form = e.target;
+        const formData = new FormData(form);
+    
+        fetch('/some-api', { method: form.method, body: formData });
+    
+        const formJson = Object.fromEntries(formData.entries());
+        console.log(formJson);
+      }
   return (
     <>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"></link>
@@ -66,12 +77,7 @@ function App() {
         <p id="mins"></p>
         <p id="secs"></p>
         <p id="end"></p>
-        <select id="presets">
-            <option value="Easter">Easter</option>
-            <option value="Halloween">Halloween</option>
-            <option value="Thanksgiving">Thanksgiving</option>
-            <option value="Christmas">Christmas</option>
-        </select>
+        <form method="post" onSubmit={handleSubmit}>
         <label>
             Month: <select id="countdownmonth">
             <option value="January">January</option>
@@ -100,7 +106,9 @@ function App() {
         <label>
             End Message: <input name="endmessage" defaultValue="" />
         </label>
-        <button type="submit">Start the countdown!</button>
+        <button type="reset">Reset form</button>
+        <button type="submit">Submit form</button>
+        </form>
     </>
   );
 }
