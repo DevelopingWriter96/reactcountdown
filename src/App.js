@@ -1,11 +1,11 @@
 import './App.css';
 
-let targetMonth = "November";
-let targetDay = "16";
-let targetYear = "2024";
-let targetTime = "00:00:00";
-let targetMessage = "Countdown to 28: ";
-let endMessage = "Happy Birthday!";
+let targetMonth = "March";
+let targetDay = "7";
+let targetYear = "2025";
+let targetTime = "10:30:00";
+let targetMessage = "Josalyn's going to get hitched!: ";
+let endMessage = "Congradulations on your marriage!";
 
 let targetDate = targetMonth + " " + targetDay + " " + targetYear + " " + targetTime;
 
@@ -67,6 +67,7 @@ function App() {
     
         const formJson = Object.fromEntries(formData.entries());
         console.log(formJson);
+
       }
   return (
     <>
@@ -79,26 +80,10 @@ function App() {
         <p id="end"></p>
         <form method="post" onSubmit={handleSubmit}>
         <label>
-            Month: <select id="countdownmonth">
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-        </select>
+            Date: <input type="date" name="date" defaultValue="" />
         </label>
         <label>
-            Day: <input name="countdowndate" defaultValue="" />
-        </label>
-        <label>
-            Year: <input name="countdownyear" defaultValue="" /> 
+            Time: <input type="time" name="time" defaultValue="" />
         </label>
         <label>
             Header Message: <input name="headermessage" defaultValue="" />
